@@ -94,6 +94,7 @@ NSString *RMSBackspaceUnicodeString = @"\u200B";
     [self.constraintManager setupLineViewConstraints:self.lineView];
 
     self.textField = [[UITextField alloc] init];
+    [self.textField setTextColor:[UIColor whiteColor]];
     self.textField.text = RMSBackspaceUnicodeString;
     self.textField.delegate = self;
     self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -597,7 +598,7 @@ NSString *RMSBackspaceUnicodeString = @"\u200B";
     /* Draw Stroke */
     CGContextAddPath(context, [UIBezierPath bezierPathWithRoundedRect:CGRectInset(rect, 0.2, 0.2) cornerRadius:self.tokenViewBorderRadius].CGPath);
     CGContextSetStrokeColorWithColor(context, strokeColor.CGColor);
-    CGContextSetLineWidth(context, 0.5);
+    CGContextSetLineWidth(context, 1);
     CGContextStrokePath(context);
 
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
