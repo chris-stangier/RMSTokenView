@@ -62,7 +62,7 @@ NSString *RMSBackspaceUnicodeString = @"\u200B";
     }
     self.contentSize = self.bounds.size;
     self.clipsToBounds = YES;
-    self.backgroundColor = [UIColor whiteColor];
+    //self.backgroundColor = [UIColor whiteColor];
     
     _tokenViews = [NSMutableArray array];
     _tokenLines = [NSMutableArray arrayWithObject:[NSMutableArray array]];

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BRA-6O-req">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13D12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BRA-6O-req">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--View Controller - RMSTokenView-->
@@ -17,21 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3J-UV-bvF" customClass="RMSTokenView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3J-UV-bvF" customClass="RMSTokenView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="116"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="tU6-CP-8oD"/>
+                                    <constraint firstAttribute="height" constant="116" id="tU6-CP-8oD"/>
                                     <constraint firstAttribute="width" constant="320" id="uR7-pe-yUn"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="heightConstraint" destination="tU6-CP-8oD" id="J1f-z6-VKT"/>
+                                    <outlet property="heightConstraint" destination="tU6-CP-8oD" id="sgN-Vf-Umh"/>
                                 </connections>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.77282184099999995" green="0.19152447880000001" blue="0.4162791367" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="H3J-UV-bvF" firstAttribute="top" secondItem="VsK-3E-ajc" secondAttribute="top" constant="64" id="XLk-Ox-XtF"/>
+                            <constraint firstItem="H3J-UV-bvF" firstAttribute="leading" secondItem="VsK-3E-ajc" secondAttribute="leading" id="kvs-TO-fZp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="RMSTokenView" id="vax-lM-dfx"/>
@@ -43,7 +45,6 @@
         <!--Navigation Controller-->
         <scene sceneID="NZX-Lo-BHg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cZC-ZH-qKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BRA-6O-req" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
@@ -56,6 +57,7 @@
                         <segue destination="ZWX-Pu-DxJ" kind="relationship" relationship="rootViewController" id="Rkv-rp-5Op"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZC-ZH-qKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="212" y="-59"/>
         </scene>
