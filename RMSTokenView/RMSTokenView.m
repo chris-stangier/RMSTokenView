@@ -173,6 +173,9 @@ NSString *RMSBackspaceUnicodeString = @"\u200B";
 
     [self updateSummary];
     [self resetLines];
+    
+    NSLog(@"added");
+    [self becomeFirstResponder];
 }
 
 - (void)removeTokenWithText:(NSString *)tokenText {
@@ -200,6 +203,7 @@ NSString *RMSBackspaceUnicodeString = @"\u200B";
 - (void)viewSelected:(UITapGestureRecognizer *)tapGesture {
     [self becomeFirstResponder];
     [self selectTokenWithText:nil];
+    NSLog(@"viewSelected");
 }
 
 - (void)selectedToken:(UIButton *)tokenButton {
@@ -451,7 +455,7 @@ NSString *RMSBackspaceUnicodeString = @"\u200B";
     }
 
     [self manuallyChangeTextField:textField inRange:range replacementString:string];
-    [self setSearching:([self.text length] > 0) animated:YES];
+    //[self setSearching:([self.text length] > 0) animated:YES];
 
 
     if ([self.tokenDelegate respondsToSelector:@selector(tokenView:didChangeText:)]) {
@@ -477,6 +481,7 @@ NSString *RMSBackspaceUnicodeString = @"\u200B";
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
+    NSLog(@"didBeginEditing");
     [UIView animateWithDuration:0.25 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:^{
         for (UIView *tokenView in self.tokenViews) {
             tokenView.alpha = 1.0;
@@ -492,6 +497,7 @@ NSString *RMSBackspaceUnicodeString = @"\u200B";
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    /*
     dispatch_async(dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:0.25 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:^{
             self.scrollEnabled = NO;
@@ -509,6 +515,7 @@ NSString *RMSBackspaceUnicodeString = @"\u200B";
             self.contentOffset = CGPointMake(0.0, 0.0);
         } completion:nil];
     });
+     */
     return YES;
 }
 
