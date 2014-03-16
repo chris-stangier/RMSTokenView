@@ -531,13 +531,19 @@ NSString *RMSBackspaceUnicodeString = @"\u200B";
     UIColor *topColor; UIColor *bottomColor; UIColor *strokeColor;
 
     if (state == UIControlStateNormal) {
-        topColor = [UIColor colorWithRed:0.87f green:0.91f blue:0.96f alpha:1.0f];
-        bottomColor = [UIColor colorWithRed:0.75f green:0.82f blue:0.92f alpha:1.0f];
-        strokeColor = [UIColor colorWithRed:0.64f green:0.73f blue:0.88f alpha:1.00f];
+        topColor    = [UIColor clearColor];
+        //[UIColor colorWithRed:0.87f green:0.91f blue:0.96f alpha:1.0f];
+        bottomColor = [UIColor clearColor];
+        //[UIColor colorWithRed:0.75f green:0.82f blue:0.92f alpha:1.0f];
+        strokeColor = [UIColor whiteColor];
+        //[UIColor colorWithRed:0.64f green:0.73f blue:0.88f alpha:1.00f];
     } else if (state == UIControlStateHighlighted || state == UIControlStateSelected) {
-        topColor = [UIColor colorWithRed:0.3f green:0.56f blue:0.98f alpha:1.0f];
-        bottomColor = [UIColor colorWithRed:0.21f green:0.37f blue:1.0f alpha:1.0f];
-        strokeColor = [UIColor colorWithRed:0.27f green:0.42f blue:0.84f alpha:1.00f];
+        topColor    = [UIColor whiteColor];
+        //[UIColor colorWithRed:0.3f green:0.56f blue:0.98f alpha:1.0f];
+        bottomColor = [UIColor whiteColor];
+        //[UIColor colorWithRed:0.21f green:0.37f blue:1.0f alpha:1.0f];
+        strokeColor = [UIColor whiteColor];
+        //[UIColor colorWithRed:0.27f green:0.42f blue:0.84f alpha:1.00f];
     }
     return [self buttonImageWithTopColor:topColor bottomColor:bottomColor withStrokeColor:strokeColor];
 }
@@ -547,17 +553,17 @@ NSString *RMSBackspaceUnicodeString = @"\u200B";
     if (state == UIControlStateNormal) {
         return @{
                 NSFontAttributeName: [UIFont systemFontOfSize:15.0],
-                NSForegroundColorAttributeName: [UIColor blackColor],
+                NSForegroundColorAttributeName: [UIColor whiteColor],
         };
     } else if (state == UIControlStateHighlighted) {
         return @{
                 NSFontAttributeName: [UIFont systemFontOfSize:15.0],
-                NSForegroundColorAttributeName: [UIColor whiteColor],
+                NSForegroundColorAttributeName: [UIColor blackColor],
         };
     } else if (state == UIControlStateSelected) {
         return @{
                 NSFontAttributeName: [UIFont systemFontOfSize:15.0],
-                NSForegroundColorAttributeName: [UIColor whiteColor],
+                NSForegroundColorAttributeName: [UIColor blackColor],
         };
     }
 
